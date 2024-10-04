@@ -1,0 +1,26 @@
+//reading from file
+import java.io.*;
+public class Reading_into_file {
+    public static void main(String[] args) {
+       try{
+        int vow=0; 
+        int conso=0;                                      
+        char c[]=new char[120];
+        FileReader F=new FileReader("C:\\Users\\LENOVO\\Desktop\\Javalearning\\myfile.txt");
+        F.read(c);
+        for(char r:c){
+         if (c[r]=='a'|| c[r]=='e'||c[r]=='i'||c[r]=='o'||c[r]=='u') {        
+            vow=vow+1;
+         }
+         else{
+            conso=conso+1;
+         }
+        }
+        System.out.println("The total number of vowels is :"+ vow);
+        System.out.println("The total number of Consonats is :"+conso);
+       } 
+       catch(Exception e){
+        System.out.println("Something is wrong in code");
+       }
+    }
+}
